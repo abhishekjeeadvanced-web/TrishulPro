@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#06090f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Trishul PRO by Abhishek Sharma</title>
+    
+    <!-- Google Fonts for Handwriting Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <!-- HEADER WITH GLASS LOGO & BRANDING -->
+  <div class="hdr">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <!-- Glassmorphism Logo -->
+      <div class="glass-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8b5cf6" />
+              <stop offset="100%" stop-color="#f5c542" />
+            </linearGradient>
+          </defs>
+          <path d="M12 2v20M8 6v4c0 2.2 4 4 4 4s4-1.8 4-4V6M12 2L8 6M12 2l4 4"/>
+        </svg>
+      </div>
+      <div>
+        <div class="hdr-logo">Trishul PRO</div>
+        <div class="author-name">by Abhishek Sharma</div>
+      </div>
+    </div>
+    <div class="hdr-date" id="hdrDate"></div>
+  </div>
+
+  <!-- MAIN CONTENT AREA -->
+  <div class="mn" id="main"></div>
+
+  <!-- BOTTOM NAVIGATION -->
+  <div class="nav">
+    <div class="ni on" data-v="home" onclick="nav('home')"><div class="ni-icon">🏠</div><div>Home</div><div class="ni-dot"></div></div>
+    <div class="ni" data-v="planner" onclick="nav('planner')"><div class="ni-icon">📅</div><div>Planner</div><div class="ni-dot"></div></div>
+    <div class="ni" data-v="timer" onclick="nav('timer')"><div class="ni-icon">⏱️</div><div>Timer</div><div class="ni-dot"></div></div>
+    <div class="ni" data-v="stats" onclick="nav('stats')"><div class="ni-icon">📊</div><div>Stats</div><div class="ni-dot"></div></div>
+    <div class="ni" data-v="profile" onclick="nav('profile')"><div class="ni-icon">👤</div><div>Profile</div><div class="ni-dot"></div></div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">Message</div>
+
+<!-- Link to JavaScript -->
+<script src="app.js"></script>
+</body>
+</html>
